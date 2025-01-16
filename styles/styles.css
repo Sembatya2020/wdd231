@@ -62,8 +62,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
-
 nav ul li a:hover {
     text-decoration: none;
     color: yellow;
@@ -76,7 +74,6 @@ main {
     gap: 2rem;
     padding: 2rem;
     margin: 0 auto;
-   
 }
 
 main section {
@@ -95,7 +92,6 @@ main h2 {
     box-sizing: border-box;
     padding: 10px;
 }
-
 
 /* Course work */
 .course-work ul {
@@ -143,6 +139,8 @@ main h2 {
     font-size: 1rem;
     cursor: pointer;
 }
+
+/* Modal styles */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -187,11 +185,6 @@ main h2 {
     color: black;
     text-decoration: none;
 }
-:modal {
-    background-color: beige;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
 
 .cse {
     background-color: #8B0000;
@@ -202,6 +195,7 @@ main h2 {
     background-color: lightcoral;
     color: #000;
 }
+
 /* Base styles for the hamburger menu */
 .hamburger {
     cursor: pointer;
@@ -210,33 +204,34 @@ main h2 {
     justify-content: space-around;
     width: 30px;
     height: 25px;
-  }
-  
-  .hamburger span {
+}
+
+.hamburger span {
     display: block;
     height: 3px;
     background-color: #333;
     margin-bottom: 4px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .hamburger span:last-child {
+}
+
+.hamburger span:last-child {
     margin-bottom: 0; /* Remove margin from the last span */
-  }
-  
-  /* Transform hamburger into 'X' */
-  .hamburger.active span:nth-child(1) {
+}
+
+/* Transform hamburger into 'X' */
+.hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger.active span:nth-child(2) {
+}
+
+.hamburger.active span:nth-child(2) {
     opacity: 0;
-  }
-  
-  .hamburger.active span:nth-child(3) {
+}
+
+.hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
-  }
-  /* Add this to your styles/index.css */
+}
+
+/* Add this to your styles/index.css */
 .courses button.completed {
     background-color: #4CAF50; /* Green background for completed courses */
     color: black; /* White text color */
@@ -246,8 +241,7 @@ main h2 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
-  
-  
+
 /* Footer */
 footer {
     background-color: #003366;
@@ -262,4 +256,3 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
-
