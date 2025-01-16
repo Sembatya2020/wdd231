@@ -1,0 +1,29 @@
+{
+    "familyName": "Sembatya",
+    "dateMovedIn": "2024-01-01",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "familyMembers": [
+      {
+        "name": "Shafic Senkungu",
+        "gender": "Male",
+        "birthdate": "1995-09-09"
+      },
+      {
+        "name": "Nabachwa Viola",
+        "gender": "Female",
+        "birthdate": "2006-01-02"
+      },
+      {
+        "name": "Muganga Samuel",
+        "gender": "Male",
+        "birthdate": "1989-06-02"
+      },
+      {
+        "name": "Namaganda Sumaya",
+        "gender": "Female",
+        "birthdate": "2017-07-01"
+      }
+    ]
+  }
+  
