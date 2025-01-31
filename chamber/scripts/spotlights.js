@@ -2,13 +2,24 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("data/members.json")
         .then(response => response.json())
         .then(data => {
-            const members = data.filter(member => member.membershipLevel >= 2); // Show only gold/silver members
-            shuffleArray(members);
-            
+            // Filter only Gold (3) and Silver (2) members
+            const eligibleMembers = data.filter(member => member.membershipLevel >= 2);
+
+            if (eligibleMembers.length === 0) {
+                console.warn("No eligible members found.");
+                document.getElementById("spotlight-container").innerHTML = "<p>No spotlight members available.</p>";
+                return;
+            }
+
+            shuffleArray(eligibleMembers);
+
+            // Select exactly 2 or 3 members randomly
+            const selectedMembers = eligibleMembers.slice(0, Math.floor(Math.random() * 2) + 2); 
+
             const spotlightContainer = document.getElementById("spotlight-container");
             spotlightContainer.innerHTML = ""; // Clear previous content
 
-            members.slice(0, 3).forEach(member => {
+            selectedMembers.forEach(member => {
                 const card = document.createElement("div");
                 card.classList.add("spotlight");
 
@@ -27,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error loading members:", error));
 });
 
-// Shuffle function for random spotlights
+// Function to shuffle array (Fisher-Yates Algorithm)
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
