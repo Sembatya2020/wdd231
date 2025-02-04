@@ -85,6 +85,8 @@ a:hover {
     transform: translateY(-5px);
     background-color: var(--secondary-color);
 }
+
+/* Content Section */
 .content {
     background-color: #ef9292; 
     padding: 20px; 
@@ -98,19 +100,21 @@ a:hover {
     font-size: 24px; 
     margin-bottom: 15px;
     text-align: left; 
-    font-family: 'Arial', sans-serif; 
+    font-family: var(--font-family);
 }
 
 section {
     margin-bottom: 20px;
 }
 
+/* Weather & Spotlight Sections */
 .weather, .spotlights {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Membership Spotlights */
 .spotlights {
     display: flex;
     flex-direction: column;
@@ -119,11 +123,11 @@ section {
 }
 
 #spotlight-container {
-    display: flex; /* Makes it horizontal */
-    flex-wrap: nowrap; /* Prevents wrapping (set to 'wrap' if you want responsive behavior) */
+    display: flex;
+    flex-wrap: nowrap;
     gap: 20px;
     justify-content: center;
-    overflow-x: auto; /* Enables horizontal scrolling if too many items */
+    overflow-x: auto;
     padding: 10px;
     max-width: 100%;
 }
@@ -134,8 +138,8 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 15px;
     text-align: center;
-    width: 250px; /* Adjust size */
-    flex-shrink: 0; /* Prevents items from shrinking */
+    width: 250px;
+    flex-shrink: 0;
 }
 
 .spotlight img {
@@ -145,6 +149,7 @@ section {
     border-radius: 5px;
 }
 
+/* Weather Section */
 .weather-section {
     margin-bottom: 20px;
 }
@@ -179,21 +184,7 @@ section {
     max-height: 300px;
 }
 
-
-@media (max-width: 768px) {
-    .hero-content {
-        width: 90%;
-    }
-    .spotlight-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .weather-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
+/* Footer */
 footer {
     background: #86b8ea;
     color: rgb(12, 1, 1);
@@ -230,6 +221,7 @@ footer {
     display: flex;
     gap: 10px;
 }
+
 .social-media img {
     width: 30px; 
     height: 30px; 
@@ -239,7 +231,51 @@ footer {
     color: white;
     font-size: 20px;
 }
+
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .hero-content {
+        width: 90%;
+    }
+
+    /* Fixing Membership Spotlights for Mobile */
+    .spotlights {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #spotlight-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+        overflow-x: hidden;
+    }
+
+    .spotlight {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .spotlight img {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .weather-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     footer {
         flex-direction: column;
         text-align: center;
@@ -250,6 +286,8 @@ footer {
         align-items: center;
     }
 }
+
+/* Navigation Menu */
 #hamburger {
     font-size: 1.5rem;
     background: none;
@@ -282,6 +320,7 @@ footer {
     #navMenu {
         display: none;
     }
+
     #navMenu.show {
         display: block;
         flex-direction: column; 
