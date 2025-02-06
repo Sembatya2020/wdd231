@@ -1,0 +1,52 @@
+{
+    "location":[
+        {
+            "title": "Bwindi Impenetrable Forest",
+            "image": "images/bwindi.webp",
+            "address": "Southwest Uganda",
+            "description": "Famous for gorilla trekking and biodiversity."
+        },
+        {
+            "title": "Murchison Falls",
+            "image": "images/murchison_falls.webp",
+            "address": "Northwestern Uganda",
+            "description": "Known for its powerful waterfall and wildlife."
+        },
+        {
+            "title": "Lake Victoria",
+            "image": "images/lake_victoria.webp",
+            "address": "Central Uganda",
+            "description": "The largest lake in Africa, offering many water activities."
+        },
+        {
+            "title": "Kidepo Valley National Park",
+            "image": "images/kidepo_valley.webp",
+            "address": "Northeastern Uganda",
+            "description": "Famous for its stunning landscapes and wildlife."
+        },
+        {
+            "title": "Fort Portal",
+            "image": "images/fort_portal.webp",
+            "address": "Western Uganda",
+            "description": "A scenic town near crater lakes and national parks."
+        },
+        {
+            "title": "Jinja",
+            "image": "images/jinja.webp",
+            "address": "Eastern Uganda",
+            "description": "Home to the source of the Nile and adventure activities."
+        },
+        {
+            "title": "Rwenzori Mountains",
+            "image": "images/rwenzori_mountains.webp",
+            "address": "Western Uganda",
+            "description": "Known as the 'Mountains of the Moon' with unique glaciers."
+        },
+        {
+            "title": "Entebbe Botanical Gardens",
+            "image": "images/entebbe_gardens.webp",
+            "address": "Entebbe, Central Uganda",
+            "description": "A beautiful garden by Lake Victoria."
+        }
+    ]
+}
