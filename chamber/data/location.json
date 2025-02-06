@@ -2,49 +2,49 @@
     "location":[
         {
             "title": "Bwindi Impenetrable Forest",
-            "image": "images/bwindi.webp",
+            "image": "images/Bwindi.jpg",
             "address": "Southwest Uganda",
             "description": "Famous for gorilla trekking and biodiversity."
         },
         {
             "title": "Murchison Falls",
-            "image": "images/murchison_falls.webp",
+            "image": "images/Murchison.jpg",
             "address": "Northwestern Uganda",
             "description": "Known for its powerful waterfall and wildlife."
         },
         {
             "title": "Lake Victoria",
-            "image": "images/lake_victoria.webp",
+            "image": "images/lakevictoria.jpg",
             "address": "Central Uganda",
             "description": "The largest lake in Africa, offering many water activities."
         },
         {
             "title": "Kidepo Valley National Park",
-            "image": "images/kidepo_valley.webp",
+            "image": "images/Kidepo.jpg",
             "address": "Northeastern Uganda",
             "description": "Famous for its stunning landscapes and wildlife."
         },
         {
             "title": "Fort Portal",
-            "image": "images/fort_portal.webp",
+            "image": "images/FortPortal.jpg",
             "address": "Western Uganda",
             "description": "A scenic town near crater lakes and national parks."
         },
         {
             "title": "Jinja",
-            "image": "images/jinja.webp",
+            "image": "images/jinja.jpg",
             "address": "Eastern Uganda",
             "description": "Home to the source of the Nile and adventure activities."
         },
         {
             "title": "Rwenzori Mountains",
-            "image": "images/rwenzori_mountains.webp",
+            "image": "images/rwenzori.jpg",
             "address": "Western Uganda",
             "description": "Known as the 'Mountains of the Moon' with unique glaciers."
         },
         {
             "title": "Entebbe Botanical Gardens",
-            "image": "images/entebbe_gardens.webp",
+            "image": "images/entebbe.jpg",
             "address": "Entebbe, Central Uganda",
             "description": "A beautiful garden by Lake Victoria."
         }
