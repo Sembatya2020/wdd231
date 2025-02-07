@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Load Tourism Data from location.json
 function loadTourismData() {
-    fetch("data/location.json")  // Changed to direct path, remove 'data/' if not in a subfolder
+    fetch("data/location.json") // Ensure this path is correct
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -18,11 +18,11 @@ function loadTourismData() {
                 console.error("Tourism grid element not found");
                 return;
             }
-            
+
             tourismGrid.innerHTML = ""; // Clear previous content
 
             // Loop through each item in the JSON data
-            data.location.forEach(place => {  // Changed to data.location
+            data.location.forEach(place => {
                 const card = document.createElement("div");
                 card.classList.add("card");
 
@@ -34,7 +34,9 @@ function loadTourismData() {
                     </figure>
                     <address>${place.address}</address>
                     <p>${place.description}</p>
-                    <button onclick="showDetails('${place.title}')">Learn More</button>
+                    <a href="${place.url}" target="_blank">
+                        <button>Learn More</button>
+                    </a>
                 `;
 
                 tourismGrid.appendChild(card); // Append the card to the grid
@@ -47,12 +49,6 @@ function loadTourismData() {
                 tourismGrid.innerHTML = `<p>Failed to load tourism data. Please try again later.</p>`;
             }
         });
-}
-
-// Enhanced error handling for details function
-function showDetails(title) {
-    // Placeholder for future detailed view implementation
-    alert(`More details about ${title} coming soon!`);
 }
 
 // Local Storage for Visit Tracking
