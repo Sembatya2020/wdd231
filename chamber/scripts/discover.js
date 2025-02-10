@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     loadTourismData(); // Load the tourism data from location.json
     checkLastVisit();   // Check for the last visit and show the appropriate message
+    setupHamburgerMenu(); // Setup the hamburger menu functionality
 });
 
 // Load Tourism Data from location.json
@@ -22,9 +23,10 @@ function loadTourismData() {
             tourismGrid.innerHTML = ""; // Clear previous content
 
             // Loop through each item in the JSON data
-            data.location.forEach(place => {
+            data.location.forEach((place, index) => {
                 const card = document.createElement("div");
                 card.classList.add("card");
+                card.id = `card${index + 1}`;
 
                 // Insert the place data into the card's HTML structure
                 card.innerHTML = `
@@ -67,6 +69,8 @@ function checkLastVisit() {
         // If no previous visit, it's the user's first time
         message.textContent = "Welcome! Let us know if you have any questions.";
     } else {
+        // Convert lastVisit to a number
+        lastVisit = Number(lastVisit);
         // Calculate how many days since the last visit
         let daysSinceLastVisit = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24));
 
@@ -80,5 +84,24 @@ function checkLastVisit() {
     }
 
     // Update the last visit date in localStorage
-    localStorage.setItem("lastVisit", currentDate);
+    localStorage.setItem("lastVisit", currentDate.toString());
+}
+
+// Setup Hamburger Menu
+function setupHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    if (!hamburger || !navMenu) {
+        console.error("Hamburger menu elements not found");
+        return;
+    }
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+
+    navMenu.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+    });
 }

@@ -4,12 +4,26 @@
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
 }
 
 /* Medium Screen Layout (Tablet) */
 @media (min-width: 641px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
     }
 }
 
@@ -17,6 +31,9 @@
 @media (min-width: 1025px) {
     .grid-container {
         grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
     }
 }
 
@@ -92,4 +109,19 @@
     margin-bottom: 20px;
     font-size: 1.1rem;
     font-weight: bold;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: none;
+}
+
+.nav-menu.open {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+    }
 }
