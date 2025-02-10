@@ -790,3 +790,44 @@ header h1 {
       font-size: 0.9rem;
     }
   }
+
+/* Thank You Section */
+.thank-you {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.thank-you h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.thank-you p {
+    color: var(--text1-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.thank-you ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.thank-you li {
+    background-color: var(--secondary-color);
+    color: var(--text2-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you li strong {
+    color: var(--accent1-color);
+}
