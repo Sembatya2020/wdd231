@@ -59,25 +59,36 @@ header h1 {
 }
 
 /* Navbar */
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .nav-menu ul {
     display: flex;
-    gap: 2rem;
     list-style: none;
-    margin-right: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
 }
 
 .nav-menu a {
-    color: var(--text2-color);
     text-decoration: none;
+    color: #000;
+}
+
+.nav-menu a.active {
+    font-weight: bold;
+    color: #007bff;
 }
 
 .nav-menu a:hover {
     color: var(--accent1-color);
     text-decoration: underline;
-}
-
-.nav-menu a.active {
-    color: var(--accent1-color);
 }
 
 .hamburger-menu {
@@ -770,6 +781,20 @@ header h1 {
   
     .event-card {
       width: 90%;
+    }
+
+    .nav-menu ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-menu ul.show {
+      display: flex;
+    }
+  
+    .hamburger-menu {
+      display: block;
     }
   
   }
