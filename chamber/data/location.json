@@ -42,17 +42,13 @@
             "description": "Home to the source of the Nile and adventure activities.",
             "url": "https://www.brilliant-uganda.com/jinja"
         },
-        {
-            "title": "Rwenzori Mountains",
-<<<<<<< HEAD
-            "image": "images/jinja-city.jpg",
-=======
-            "image": "images/Rwenzori.jpg",
->>>>>>> 24d9d7ea75b60763ae8f3fb7a1f2b2fe931260fc
-            "address": "Western Uganda",
-            "description": "Known as the 'Mountains of the Moon' with unique glaciers.",
-            "url": "https://www.rwenzorimountainsnationalpark.com/"
-        },
+{
+    "title": "Rwenzori Mountains",
+    "image": "images/Rwenzori.jpg",
+    "address": "Western Uganda",
+    "description": "Known as the 'Mountains of the Moon' with unique glaciers.",
+    "url": "https://www.rwenzorimountainsnationalpark.com/"
+},
         {
             "title": "Entebbe Botanical Gardens",
             "image": "images/entebbe1.jpg",
