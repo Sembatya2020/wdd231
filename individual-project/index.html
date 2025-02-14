@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover East African farming practices, crops, and agricultural innovations">
+    <title>Individual Project</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="East African Farming Hub">
+    <meta property="og:description" content="Explore sustainable farming practices in East Africa">
+    <meta property="og:image" content="assets/images/content/hero-image.jpg">
+    <meta property="og:url" content="https://ivansmbt.github.io/wdd231/individual-project">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/logo2.jpg" alt="Logo" width="50" height="50" loading="lazy">
+            </div>
+            <button class="hamburger" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="https://farmersassociation.com/" target="_blank">Services</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Slider Section -->
+        <section class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="images/farming.jpg" alt="Slide 1" width="800" height="400" loading="lazy">
+                    <div class="slide-title">
+                        <h2>EAST AFRICAN FARMERS</h2>
+                        <p>Fresh from the farm, straight to your table – experience the taste of nature’s best!</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/maize.jpg" alt="Slide 2" width="800" height="400" loading="lazy">
+                    <div class="slide-title">
+                        <h2>EAST AFRICAN FARMERS</h2>
+                        <p>Support local farmers, enjoy fresh produce, and taste the difference.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/farming.jpg" alt="Slide 3" width="800" height="400" loading="lazy">
+                    <div class="slide-title">
+                        <h2>EAST AFRICAN FARMERS</h2>
+                        <p>Quality you can trust, freshness you can taste – buy directly from the best farmers</p>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </section>
+
+        <!-- Farmers Section -->
+        <section id="farmersList">
+            <h2>Common Agricultural Places in East Africa</h2>
+            <!-- Farmers data will be populated here by JavaScript -->
+        </section>
+
+        <section class="featured-crops" id="cropsList">
+            <!-- Dynamically populated by JavaScript -->
+        </section>
+
+        <section class="farming-practices">
+            <div class="center-text">
+                Sustainable Farming Practices
+            </div>
+            <div class="practices-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="weather-updates">
+            <h2>Weather Updates</h2>
+            <div id="weatherData">
+                <!-- Weather data will be populated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Contact: ivansmbt@gmail.com</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="attributions.html">Attributions</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Modal Template -->
+    <div id="cropModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script type="module" src="assets/main.js"></script>
+    <script type="module" src="assets/api.js"></script>
+    <script src="assets/farmers.js"></script>
+    <script src="assets/weather.js"></script> <!-- Include the new weather.js file -->
+    <script>
+        import { fetchWeather } from './assets/api.js';
+        fetchWeather();
+    </script>
+</body>
+</html>

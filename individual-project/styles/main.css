@@ -1,0 +1,997 @@
+/* Base Styles */
+:root {
+    --primary-color: #2c5530;
+    --secondary-color: #8bc34a;
+    --text-color: #333;
+    --background-color: #f5f5f5;
+    --accent-color: #ff6b6b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: transparent; /* Change to transparent */
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links.show {
+    display: flex; /* Ensure the navigation links are displayed */
+    flex-direction: column; /* Stack the links vertically */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white; /* Ensure the color is white */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color); /* Use the secondary color for hover */
+}
+
+.nav-links a.active {
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Specific styling for the "Services" link */
+.nav-links .dropdown-content a[href="https://farmersassociation.com/"] {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links .dropdown-content a[href="https://farmersassociation.com/"]:hover {
+    background-color: #333;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.contact-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url('assets/images/contact-hero.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Remove the CSS for the .hero section */
+.hero {
+    display: none;
+}
+
+/* Featured Crops Section */
+.featured-crops, .farming-practices, .weather-updates {
+    padding: 2rem 1rem;
+}
+
+.featured-crops {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.crop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.crop-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.crop-card:hover {
+    transform: translateY(-5px);
+}
+
+.crop-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.close-button:hover, .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    max-width: 100%; /* Set to 100% to remove margins on the sides */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    animation: slideIn 1s ease-in-out;
+    padding: 0; /* Remove padding to center the slides */
+    position: relative; /* Ensure the slide-title is positioned relative to the slide */
+}
+
+.slide img {
+    width: 100%; /* Set to 100% to remove margins on the sides */
+    height: 400px; /* Set a fixed height to reduce the height of the images */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Center the image */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.slide-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%; /* Ensure the text container is not too wide */
+    max-width: 600px; /* Set a maximum width */
+}
+
+.slide-title h2 {
+    margin: 0;
+    font-size: 24px;
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+.slide-title p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the navigation links by default on small screens */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the navigation links when the .show class is added */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .activity {
+        flex-direction: column;
+    }
+
+    .activity img {
+        max-width: 100%;
+    }
+}
+
+/* Contact Form Styles */
+.contact {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the heading */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+    text-align: left; /* Left-align the form fields */
+}
+
+.contact form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input, .contact form select, .contact form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.contact form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.map {
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.about ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.about ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* About Hero Section */
+.about-hero {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+}
+
+/* Activities Section */
+.activities {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.activities h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.activity {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activity img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.activity:hover img {
+    transform: scale(1.05);
+}
+
+.activity-description {
+    padding: 1.5rem;
+    flex: 1;
+    text-align: left;
+}
+
+.activity-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.activity-description p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.activity-description .icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Learn More Section */
+.learn-more {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.learn-more h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.learn-more p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.learn-more .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more .btn:hover {
+    background-color: #f5f5f5;
+}
+
+.practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Weather Updates Section */
+.weather-updates {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.weather {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.weather h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.weather p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.center-text {
+    text-align: center;
+    font-size: 2rem; /* Adjust the font size as needed */
+    margin: 2rem 0; /* Adjust the margin as needed */
+}
+
+/* Additional Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .featured-crops, .farming-practices, .weather-updates {
+        padding: 1rem;
+    }
+
+    .crop-card img {
+        height: 150px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .slide img {
+        height: 300px;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .activities h2 {
+        font-size: 1.5rem;
+    }
+
+    .activity-description h3 {
+        font-size: 1.2rem;
+    }
+
+    .activity-description p {
+        font-size: 1rem;
+    }
+
+    .learn-more h2 {
+        font-size: 1.5rem;
+    }
+
+    .learn-more p {
+        font-size: 1rem;
+    }
+
+    .slide-title h2 {
+        font-size: 20px;
+    }
+
+    .slide-title p {
+        font-size: 14px;
+    }
+
+    .center-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* Farmers Section */
+#farmersList {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#farmersList h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.farmer {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+.farmer img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.farmer h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.farmer p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+}
+
+.farmer a {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.farmer a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Farming Practices Section */
+.farming-practices {
+    padding: 2rem 1rem;
+    margin-top: 0.5rem; /* Reduce the margin top to leave a smaller space */
+}
+
+.farming-practices .center-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Adjust the margin bottom as needed */
+}
+
+.farming-practices .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Team Section */
+.team {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-member {
+    max-width: 200px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Timeline Section */
+.timeline {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeline-item {
+    max-width: 600px;
+    padding: 1rem;
+    border-left: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.timeline-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.timeline-item p {
+    margin: 0.5rem 0 0;
+}
+
+.timeline-item::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    margin: 0 0 1rem;
+}
+
+.testimonial h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Mission and Vision Section */
+.about {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Attributions Section */
+.attributions {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attributions h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.attributions p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.attributions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.attributions ul li {
+    margin-bottom: 10px;
+}
+
+.attributions ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.attributions ul li a:hover {
+    text-decoration: underline;
+}

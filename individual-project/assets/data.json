@@ -1,0 +1,30 @@
+{
+    "crops": [
+        {
+            "name": "Maize",
+            "description": "Maize is a staple food in East Africa, known for its versatility and nutritional value."
+        },
+        {
+            "name": "Coffee",
+            "description": "Coffee is one of the major export crops in East Africa, known for its rich flavor and aroma."
+        },
+        {
+            "name": "Tea",
+            "description": "Tea is widely grown in East Africa, particularly in Kenya and Uganda, and is known for its high quality."
+        }
+    ],
+    "practices": [
+        {
+            "name": "Crop Rotation",
+            "description": "Crop rotation helps maintain soil fertility and reduces the risk of pests and diseases."
+        },
+        {
+            "name": "Organic Farming",
+            "description": "Organic farming avoids the use of synthetic chemicals and promotes biodiversity."
+        },
+        {
+            "name": "Agroforestry",
+            "description": "Agroforestry integrates trees and shrubs into agricultural landscapes to improve soil health and provide additional income."
+        }
+    ]
+}
