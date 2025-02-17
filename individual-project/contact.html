@@ -12,18 +12,25 @@
 <body>
     <header>
         <nav class="main-nav">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/logo2.jpg" alt="East African Farming Logo">
-            </div>
+            </a>
             <button class="hamburger" aria-label="Toggle Navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="index.html" style="color: #fff;">Home</a></li>
+                <li><a href="about.html" style="color: #fff;">About</a></li>
+                <li><a href="contact.html" class="active" style="color: #fff;">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" style="color: #fff;">More</a>
+                    <div class="dropdown-content">
+                        <a href="https://farmersassociation.com/" target="_blank" style="color: #fff;">Services</a>
+                        <a href="blog.html" style="color: #fff;">Blog</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -63,9 +70,11 @@
                 <p>Contact: ivansmbt@gmail.com</p>
             </div>
             <nav class="footer-nav">
+                <a href="contact.html">Contact</a>
                 <a href="attributions.html">Attributions</a>
             </nav>
         </div>
+        <p id="lastModified">Last Updated: <script>document.write(document.lastModified);</script></p>
     </footer>
 
     <script>

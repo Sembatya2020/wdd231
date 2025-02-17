@@ -1,4 +1,4 @@
-// api.js
+import { API_KEY } from '.assets/config.js';
 
 export async function fetchCrops() {
     try {
@@ -92,23 +92,21 @@ export async function fetchPractices() {
 }
 
 export async function fetchWeather() {
-    const apiKey = '045ae9e8c907623cd67700f14b149994';
-    const city = 'Nairobi'; // You can change this to any city in East Africa
-    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-
     try {
-        const response = await fetch(apiUrl);
+        console.log('Fetching weather data...');
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=Nairobi`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
-        const weatherData = document.getElementById('weatherData');
-
-        weatherData.innerHTML = `
-            <h3>Weather in ${data.location.name}</h3>
+        console.log('Weather data:', data);
+        const weatherDataDiv = document.getElementById('weatherData');
+        weatherDataDiv.innerHTML = `
+            <p>Location: ${data.location.name}</p>
             <p>Temperature: ${data.current.temp_c}°C</p>
             <p>Condition: ${data.current.condition.text}</p>
-            <p>Humidity: ${data.current.humidity}%</p>
-            <p>Wind Speed: ${data.current.wind_kph} kph</p>
         `;
     } catch (error) {
-        console.error('Error fetching weather:', error);
+        console.error('Error fetching weather data:', error);
     }
 }

@@ -12,6 +12,51 @@
     <meta property="og:description" content="Explore sustainable farming practices in East Africa">
     <meta property="og:image" content="assets/images/content/hero-image.jpg">
     <meta property="og:url" content="https://ivansmbt.github.io/wdd231/individual-project">
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: white;
+            margin-bottom: 4px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #333;
+            }
+
+            .nav-links li {
+                text-align: center;
+                padding: 10px 0;
+                width: 100%;
+            }
+
+            .nav-links li a {
+                color: white;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,14 +70,14 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="active" style="color: #fff;">Home</a></li>
+                <li><a href="about.html" style="color: #fff;">About</a></li>
+                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">More</a>
+                    <a href="#" class="dropbtn" style="color: #fff;">More</a>
                     <div class="dropdown-content">
-                        <a href="https://farmersassociation.com/" target="_blank">Services</a>
-                        <a href="blog.html">Blog</a>
+                        <a href="https://farmersassociation.com/" target="_blank" style="color: #fff;">Services</a>
+                        <a href="blog.html" style="color: #fff;">Blog</a>
                     </div>
                 </li>
             </ul>
@@ -103,9 +148,11 @@
                 <p>Contact: ivansmbt@gmail.com</p>
             </div>
             <nav class="footer-nav">
+                
                 <a href="attributions.html">Attributions</a>
             </nav>
         </div>
+        <p id="lastModified">Last Updated: <script>document.write(document.lastModified);</script></p>
     </footer>
 
     <!-- Modal Template -->
@@ -119,10 +166,20 @@
     <script type="module" src="assets/main.js"></script>
     <script type="module" src="assets/api.js"></script>
     <script src="assets/farmers.js"></script>
-    <script src="assets/weather.js"></script> <!-- Include the new weather.js file -->
+    <script src="assets/weather.js"></script>
     <script>
         import { fetchWeather } from './assets/api.js';
-        fetchWeather();
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed');
+            fetchWeather();
+
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>

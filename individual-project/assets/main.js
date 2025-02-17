@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
+        navLinks.classList.toggle('active');
     });
 
     const modal = document.getElementById('placeModal');
@@ -126,4 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedData = JSON.parse(localStorage.getItem('data'));
         console.log(savedData);
     });
+
+    // Display last updated date
+    const lastUpdatedElement = document.querySelector('.last-updated');
+    if (lastUpdatedElement) {
+        const lastUpdated = new Date(document.lastModified);
+        lastUpdatedElement.textContent = `Last Updated: ${lastUpdated.toLocaleString()}`;
+    }
 });

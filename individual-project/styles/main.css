@@ -583,6 +583,7 @@ footer {
     border-radius: 5px;
     margin: 0.5rem;
     transition: background-color 0.3s ease;
+    color: black; /* Ensure button text is black */
 }
 
 .learn-more .btn:hover {
@@ -951,7 +952,7 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var (--text-color);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -994,4 +995,150 @@ footer {
 
 .attributions ul li a:hover {
     text-decoration: underline;
+}
+
+.get-involved-hero {
+    background: url('../assets/images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.cover-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.get-involved {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.involvement-option {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.involvement-option img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.involvement-content {
+    margin-top: 10px;
+}
+
+.get-involved h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.get-involved p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Initiatives Section */
+.initiatives-hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.initiatives {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.initiative {
+    flex: 1 1 calc(50% - 2rem);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.initiative img {
+    width: 100%;
+    height: auto;
+}
+
+.initiative-content {
+    padding: 1rem;
+}
+
+.initiative h2 {
+    margin-top: 0;
+}
+
+.initiative p {
+    margin-bottom: 0;
+}
+
+.cover-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-title {
+    font-size: 3em;
+    text-align: center;
+    margin-top: -50px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.involvement-option {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.involvement-option img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.involvement-content {
+    max-width: 600px;
+}
+
+.involvement-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.involvement-content p {
+    font-size: 1.2em;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust the max-height as needed */
 }

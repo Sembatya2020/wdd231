@@ -11,18 +11,25 @@
 <body>
     <header>
         <nav class="main-nav">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/logo2.jpg" alt="East African Farming Logo">
-            </div>
+            </a>
             <button class="hamburger" aria-label="Toggle Navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" style="color: #fff;">Home</a></li>
+                <li><a href="about.html" class="active" style="color: #fff;">About</a></li>
+                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" style="color: #fff;">More</a>
+                    <div class="dropdown-content">
+                        <a href="https://farmersassociation.com/" target="_blank" style="color: #fff;">Services</a>
+                        <a href="blog.html" style="color: #fff;">Blog</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -35,7 +42,7 @@
         </section>
 
         <!-- Mission and Vision Section -->
-        <section class="about">
+        <section class="about" style="background-color: skyblue;">
             <h2>Our Mission</h2>
             <p>Our mission is to support local farmers by providing them with the knowledge and resources they need to succeed. We aim to promote sustainable farming practices that ensure better yields and a healthier environment.</p>
             <h2>Our Vision</h2>
@@ -128,9 +135,9 @@
         </section>
 
         <!-- Call to Action Section -->
-        <section class="learn-more">
-            <h2>Learn More</h2>
-            <p>Discover more about our initiatives and how you can get involved.</p>
+        <section class="learn-more" style="background-color: darkgreen;">
+            <h2 style="color: white;">Learn More</h2>
+            <p style="color: white;">Discover more about our initiatives and how you can get involved.</p>
             <a href="initiatives.html" class="btn">Our Initiatives</a>
             <a href="get-involved.html" class="btn">Get Involved</a>
         </section>
@@ -159,9 +166,11 @@
                 <p>Contact: ivansmbt@gmail.com</p>
             </div>
             <nav class="footer-nav">
+                
                 <a href="attributions.html">Attributions</a>
             </nav>
         </div>
+        <p id="lastModified">Last Updated: <script>document.write(document.lastModified);</script></p>
     </footer>
 
     <script type="module" src="assets/main.js"></script>
