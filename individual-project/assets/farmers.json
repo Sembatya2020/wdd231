@@ -1,58 +1,28 @@
 {
-    "farmers": [
-        {
-            "place": "Kenya",
-            "description": "Known for its tea and coffee plantations.",
-            "picture": "images/coffee.jpg",
-            "url": "https://www.kiambethufarm.com/"
-        },
-        {
-            "place": "Uganda",
-            "description": "Famous for its banana and coffee production.",
-            "picture": "images/beans.jpg",
-            "url": "https://ugandacoffee.go.ug/coffee-farming"
-        },
-        {
-            "place": "Tanzania",
-            "description": "Renowned for its coffee and tea plantations.",
-            "picture": "images/coco.jpg",
-            "url": "https://stir-tea-coffee.com/features/tanzania%E2%80%99s-tea-transformation/"
-        },
-        {
-            "place": "Rwanda",
-            "description": "Known for its coffee and tea production.",
-            "picture": "images/farming.jpg",
-            "url": "https://www.ijfmr.com/papers/2023/5/6790.pdf"
-        },
-        {
-            "place": "Ethiopia",
-            "description": "Famous for its coffee production.",
-            "picture": "images/soghum.jpg",
-            "url": "https://courier.unesco.org/en/articles/ethiopia-home-coffee"
-        },
-        {
-            "place": "Burundi",
-            "description": "Known for its coffee and tea plantations.",
-            "picture": "images/train.jpg",
-            "url": "https://www.dandc.eu/en/article/growers-burundi-complain-price-they-receive-tea-too-low-they-demand-more-money"
-        },
-        {
-            "place": "South Sudan",
-            "description": "Renowned for its sorghum and millet production.",
-            "picture": "images/banana.jpg",
-            "url": "https://worldcoffeeresearch.org/news/2021/a-coffee-treasure-found-and-possibly-lost-again"
-        },
-        {
-            "place": "Somalia",
-            "description": "Famous for its banana and livestock production.",
-            "picture": "images/harvest.jpg",
-            "url": "https://satg.org/banana-in-somalia/"
-        },
-        {
-            "place": "Mombasa",
-            "description": "Famous for its banana and livestock production.",
-            "picture": "images/mng.jpg",
-            "url": "https://cafesserie.com/mombasa-menu/"
-        }
+    "farmingPlaces": [
+      {
+        "id": 1,
+        "name": "Kilimanjaro Coffee Estate",
+        "location": "Tanzania",
+        "mainCrops": ["Coffee", "Maize", "Beans"],
+        "description": "Large-scale coffee plantation with sustainable farming practices",
+        "image": "images/coffee-estate.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Lake Victoria Fish Farm",
+        "location": "Uganda",
+        "mainCrops": ["Tilapia", "Catfish"],
+        "description": "Integrated aquaculture facility with crop farming",
+        "image": "images/fish-farm.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Kenyan Tea Highlands",
+        "location": "Kenya",
+        "mainCrops": ["Tea", "Pyrethrum"],
+        "description": "High-altitude tea plantation with organic certification",
+        "image": "images/tea-plantation.jpg"
+      }
     ]
-}
+  }

@@ -3,41 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover East African farming practices, crops, and agricultural innovations">
-    <title>Individual Project</title>
+    <meta name="description" content="Discover East African farming practices and agricultural innovations">
+    <title>East African Farming Hub</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="East African Farming Hub">
-    <meta property="og:description" content="Explore sustainable farming practices in East Africa">
-    <meta property="og:image" content="assets/images/content/hero-image.jpg">
-    <meta property="og:url" content="https://ivansmbt.github.io/wdd231/individual-project">
-    <style>
-        .main-nav .hamburger {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .main-nav .hamburger {
-                display: block;
-            }
-
-            .main-nav .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .main-nav .nav-links.active {
-                display: flex;
-            }
-
-            .main-nav .nav-links li {
-                text-align: center;
-                padding: 10px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -51,128 +22,114 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="index.html" class="active" style="color: #fff;">Home</a></li>
-                <li><a href="about.html" style="color: #fff;">About</a></li>
-                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" style="color: #fff;">More</a>
-                    <div class="dropdown-content">
-                        <a href="https://farmersassociation.com/" target="_blank" style="color: #fff;">Services</a>
-                        <a href="blog.html" style="color: #fff;">Blog</a>
-                    </div>
-                </li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Slider Section -->
-        <section class="slider">
-            <div class="slides">
-                <div class="slide">
-                    <img src="images/farming.jpg" alt="Slide 1" width="800" height="400" loading="lazy">
-                    <div class="slide-title">
-                        <h2>EAST AFRICAN FARMERS</h2>
-                        <p>Fresh from the farm, straight to your table – experience the taste of nature’s best!</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/maize.jpg" alt="Slide 2" width="800" height="400" loading="lazy">
-                    <div class="slide-title">
-                        <h2>EAST AFRICAN FARMERS</h2>
-                        <p>Support local farmers, enjoy fresh produce, and taste the difference.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/farming.jpg" alt="Slide 3" width="800" height="400" loading="lazy">
-                    <div class="slide-title">
-                        <h2>EAST AFRICAN FARMERS</h2>
-                        <p>Quality you can trust, freshness you can taste – buy directly from the best farmers</p>
-                    </div>
-                </div>
-                <!-- Add more slides as needed -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>EAST AFRICAN FARMERS</h1>
+                <p>Fresh from the farm, straight to your table</p>
+                <a href="#farming-places" class="cta-button">Explore Farms</a>
             </div>
-            <button class="prev">❮</button>
-            <button class="next">❯</button>
         </section>
 
-        <!-- Farmers Section -->
-        <section id="farmersList">
-            <h2>Common Agricultural Places in East Africa</h2>
-            <!-- Farmers data will be populated here by JavaScript -->
+        <section class="intro">
+            <h2>Welcome to East African Farming Hub</h2>
+            <p>Discover sustainable farming practices and connect with local farmers across East Africa.</p>
         </section>
 
-        <section class="featured-crops" id="cropsList">
-            <!-- Dynamically populated by JavaScript -->
-        </section>
-
-        <section class="farming-practices">
-            <div class="center-text">
-                Sustainable Farming Practices
-            </div>
-            <div class="practices-grid">
+        <section id="farming-places" class="farming-places-section">
+            <h2>Featured Farming Places</h2>
+            <div class="farming-places-grid">
                 <!-- Dynamically populated by JavaScript -->
             </div>
         </section>
 
-        <section class="weather-updates">
-            <h2>Weather Updates</h2>
-            <div id="weatherData">
-                <!-- Weather data will be populated here -->
+        <section class="featured-crops">
+            <h2>Our Major Crops</h2>
+            <div class="crops-grid">
+                <div class="crop-card">
+                    <img src="images/coffee.jpg" alt="Coffee" loading="lazy">
+                    <div class="crop-info">
+                        <h3>Coffee</h3>
+                        <p>Premium East African coffee beans</p>
+                    </div>
+                </div>
+                <div class="crop-card">
+                    <img src="images/farming.jpg" alt="Tea" loading="lazy">
+                    <div class="crop-info">
+                        <h3>Tea</h3>
+                        <p>High-quality highland tea</p>
+                    </div>
+                </div>
+                <div class="crop-card">
+                    <img src="images/maize.jpg" alt="Maize" loading="lazy">
+                    <div class="crop-info">
+                        <h3>Maize</h3>
+                        <p>Sustainable grain production</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-content">
-            <div class="contact-info">
-                <p>Contact: ivansmbt@gmail.com</p>
+            <div class="footer-section">
+                <h3>East African Farming Hub</h3>
+                <p>Promoting sustainable farming practices across East Africa</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
-            <nav class="footer-nav">
-                
-                <a href="attributions.html">Attributions</a>
-            </nav>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> ivansmbt@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +256 123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+            </div>
         </div>
-        <p id="lastModified">Last Updated: <script>document.write(document.lastModified);</script></p>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 East African Farming Hub | All rights reserved</p>
+            <p>Last Updated: <span id="lastModified"></span></p>
+        </div>
     </footer>
 
-    <!-- Modal Template -->
-    <div id="cropModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div id="modalContent"></div>
-        </div>
-    </div>
-
-    <script type="module" src="assets/main.js"></script>
-    <script type="module" src="assets/api.js"></script>
-    <script src="assets/farmers.js"></script>
-    <script src="assets/weather.js"></script>
-    <script>
-        import { fetchWeather } from './assets/api.js';
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM fully loaded and parsed');
-            fetchWeather();
-
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-
-            // Automatic slide functionality
-            let slideIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            const showSlides = () => {
-                slides.forEach((slide, index) => {
-                    slide.style.display = index === slideIndex ? 'block' : 'none';
-                });
-                slideIndex = (slideIndex + 1) % slides.length;
-            };
-            showSlides();
-            setInterval(showSlides, 3000); // Change slide every 3 seconds
-        });
-    </script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
