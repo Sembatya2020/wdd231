@@ -9,12 +9,27 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Same header as index.html -->
-    
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/logo2.jpg" alt="Logo" width="50" height="50" loading="lazy">
+            </div>
+            <button class="hamburger" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section class="contact-form">
             <h1>Contact Us</h1>
-            <form id="contact-form">
+            <form id="contact-form" action="thankyou.html">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -70,7 +85,7 @@
             
             <div class="footer-section">
                 <h3>Newsletter</h3>
-                <form class="newsletter-form">
+                <form id="newsletter-form" class="newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
                 </form>
@@ -80,9 +95,13 @@
         <div class="footer-bottom">
             <p>&copy; 2024 East African Farming Hub | All rights reserved</p>
             <p>Last Updated: <span id="lastModified"></span></p>
+            <p><a href="attributions.html">Attributions</a></p>
         </div>
     </footer>
-
-    <!-- Same footer as index.html -->
+    <script>
+        document.getElementById('lastModified').textContent = new Date().toLocaleString();
+    </script>
+    <script type="module" src="scripts/subscription.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
 </body>
 </html>

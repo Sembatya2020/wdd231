@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/farming-places.css"> <!-- Add this line -->
 </head>
 <body>
     <header>
@@ -50,32 +51,7 @@
             </div>
         </section>
 
-        <section class="featured-crops">
-            <h2>Our Major Crops</h2>
-            <div class="crops-grid">
-                <div class="crop-card">
-                    <img src="images/coffee.jpg" alt="Coffee" loading="lazy">
-                    <div class="crop-info">
-                        <h3>Coffee</h3>
-                        <p>Premium East African coffee beans</p>
-                    </div>
-                </div>
-                <div class="crop-card">
-                    <img src="images/farming.jpg" alt="Tea" loading="lazy">
-                    <div class="crop-info">
-                        <h3>Tea</h3>
-                        <p>High-quality highland tea</p>
-                    </div>
-                </div>
-                <div class="crop-card">
-                    <img src="images/maize.jpg" alt="Maize" loading="lazy">
-                    <div class="crop-info">
-                        <h3>Maize</h3>
-                        <p>Sustainable grain production</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <footer class="site-footer">
@@ -105,6 +81,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li> <!-- Add this line -->
                 </ul>
             </div>
             
@@ -117,7 +94,7 @@
             
             <div class="footer-section">
                 <h3>Newsletter</h3>
-                <form class="newsletter-form">
+                <form id="newsletter-form" class="newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
                 </form>
@@ -127,9 +104,13 @@
         <div class="footer-bottom">
             <p>&copy; 2024 East African Farming Hub | All rights reserved</p>
             <p>Last Updated: <span id="lastModified"></span></p>
+            <p><a href="attributions.html">Attributions</a></p> <!-- Move this line here -->
         </div>
     </footer>
 
     <script type="module" src="scripts/main.js"></script>
-</body>
+    <script type="module" src="scripts/subscription.js"></script> <!-- Add this line -->
+    <script>
+        document.getElementById('lastModified').textContent = new Date().toLocaleString();
+    </script>
 </html>

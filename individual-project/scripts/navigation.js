@@ -15,6 +15,5 @@ export const initNavigation = () => {
         hamburger.classList.remove('active');
       }
     });
-  };
+};
 
-  

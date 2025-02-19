@@ -25,6 +25,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
             </ul>
         </nav>
     </header>
@@ -98,6 +99,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
                 </ul>
             </div>
             
@@ -110,7 +112,7 @@
             
             <div class="footer-section">
                 <h3>Newsletter</h3>
-                <form class="newsletter-form">
+                <form id="newsletter-form" class="newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
                 </form>
@@ -123,6 +125,11 @@
         </div>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="in.js"></script>
+    <script type="module" src="scripts/subscription.js"></script>
+    <script type="module" src="scripts/navigation.js"></script> <!-- Add this line -->
+    <script>
+        document.getElementById('lastModified').textContent = new Date().toLocaleString();
+    </script>
 </body>
 </html>

@@ -14,7 +14,11 @@
 </head>
 <body>
     <!-- Same header as index.html -->
-    
+    <header>
+        <nav class="main-nav">
+            <!-- ...existing code... -->
+        </nav>
+    </header>
     <main>
         <section class="thank-you">
             <h1>Thank You!</h1>
@@ -24,58 +28,61 @@
     </main>
 
     <!-- Same footer as index.html -->
-</body>
-<footer class="site-footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>East African Farming Hub</h3>
-            <p>Promoting sustainable farming practices across East Africa</p>
-            <div class="social-icons">
-                <a href="https://facebook.com" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://instagram.com" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://linkedin.com" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>East African Farming Hub</h3>
+                <p>Promoting sustainable farming practices across East Africa</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> ivansmbt@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +256 123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
             </div>
         </div>
         
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2024 East African Farming Hub | All rights reserved</p>
+            <p>Last Updated: <span id="lastModified"></span></p>
         </div>
-        
-        <div class="footer-section">
-            <h3>Contact Info</h3>
-            <p><i class="fas fa-envelope"></i> ivansmbt@gmail.com</p>
-            <p><i class="fas fa-phone"></i> +256 123 456 789</p>
-            <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
-        </div>
-        
-        <div class="footer-section">
-            <h3>Newsletter</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
-            </form>
-        </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <p>&copy; 2024 East African Farming Hub | All rights reserved</p>
-        <p>Last Updated: <span id="lastModified"></span></p>
-    </div>
-</footer>
+    </footer>
+    <script>
+        document.getElementById('lastModified').textContent = new Date().toLocaleString();
+    </script>
+    <script type="module" src="scripts/subscription.js"></script>
+</body>
 </html>
-
-Version 1 of 2
