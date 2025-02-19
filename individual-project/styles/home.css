@@ -1,13 +1,13 @@
 .hero {
     height: 80vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/farming.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/farming.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #f0f0f0; /* Ensures strong contrast on dark background */
     text-align: center;
 }
 
@@ -19,37 +19,38 @@
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #005F20; /* Slightly brighter for better contrast */
+    color: #FFFFFF;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--secondary-color);
+    background-color: #005F20;
 }
 
 .intro {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: #f5f5f5;
+    background-color: #F5F5F5;
+    color: #333333;
 }
 
 .intro h2 {
-    color: var(--primary-color);
+    color: #007B30;
     margin-bottom: 1rem;
 }
 
@@ -60,7 +61,7 @@
 .farming-places-section h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: #007B30;
 }
 
 .farming-places-grid {
@@ -72,7 +73,7 @@
 }
 
 .farm-card {
-    background: white;
+    background: #FFFFFF;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -91,15 +92,16 @@
 
 .farm-info {
     padding: 1.5rem;
+    color: #333333; /* Ensure text has sufficient contrast */
 }
 
 .farm-info h3 {
-    color: var(--primary-color);
+    color: #007B30;
     margin-bottom: 0.5rem;
 }
 
 .farm-location {
-    color: #666;
+    color: #222222; /* Darker text for better contrast */
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
@@ -112,8 +114,8 @@
 }
 
 .crop-tag {
-    background-color: #e0f2e9;
-    color: var(--primary-color);
+    background-color: #D0E8D0; /* Soft green for subtle contrast */
+    color: #005F20; /* Darker text for better contrast */
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -121,13 +123,13 @@
 
 .featured-crops {
     padding: 4rem 2rem;
-    background-color: #f5f5f5;
+    background-color: #F5F5F5;
 }
 
 .featured-crops h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: #007B30;
 }
 
 .crops-grid {
@@ -139,7 +141,7 @@
 }
 
 .crop-card {
-    background: white;
+    background: #FFFFFF;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -162,7 +164,7 @@
 }
 
 .crop-info h3 {
-    color: var(--primary-color);
+    color: #007B30;
     margin-bottom: 0.5rem;
 }
 
