@@ -1,6 +1,6 @@
 .about-hero {
     position: relative;
-    background-image: url(/individual-project/images/banana.jpg);
+    background-image: url('../images/banana.jpg'); /* Ensure the path is correct */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
