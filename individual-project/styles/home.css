@@ -31,15 +31,15 @@
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #005F20; /* Slightly brighter for better contrast */
-    color: #FFFFFF;
+    background-color: #153d0d; /* Change to a green shade */
+    color: white; /* Change text to white */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #005F20;
+    background-color: #3a6f31; /* Slightly darker green for hover effect */
 }
 
 .intro {
@@ -121,6 +121,20 @@
     font-size: 0.8rem;
 }
 
+.farm-card .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #000000; /* Change to black */
+    color: #FFFFFF; /* Change text to white */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.farm-card .cta-button:hover {
+    background-color: #333333; /* Slightly lighter black for hover effect */
+}
+
 .featured-crops {
     padding: 4rem 2rem;
     background-color: #F5F5F5;
@@ -182,3 +196,5 @@
         grid-template-columns: 1fr;
     }
 }
+
+
