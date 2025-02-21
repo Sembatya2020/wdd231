@@ -18,7 +18,7 @@
     <header>
         <nav class="main-nav">
             <div class="logo">
-                <img src="images/logo2.jpg" alt="Logo" width="50" height="50">
+                <img src="images/logo2.jpg" alt="Logo" width="50" height="50" loading="lazy">
             </div>
             <button class="hamburger" aria-label="Toggle Navigation">
                 <span></span>
@@ -26,10 +26,9 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="attributions.html">Attributions</a></li>
             </ul>
         </nav>
     </header>
@@ -80,7 +79,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="attributions.html">Attributions</a></li> <!-- Add this line -->
                 </ul>
             </div>
             
@@ -103,11 +102,12 @@
         <div class="footer-bottom">
             <p>&copy; 2024 East African Farming Hub | All rights reserved</p>
             <p>Last Updated: <span id="lastModified"></span></p>
+            <p><a href="attributions.html">Attributions</a></p> <!-- Move this line here -->
         </div>
     </footer>
 
-    <script src="scripts/about.js"></script>
-    <script src="scripts/subscription.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/subscription.js"></script> <!-- Add this line -->
     <script>
         document.getElementById('lastModified').textContent = new Date().toLocaleString();
     </script>
